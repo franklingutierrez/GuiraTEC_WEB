@@ -1,7 +1,10 @@
 *{
     box-sizing: border-box;
 }
-
+html{
+    /* cada vez que cambie de seccion sera natural */
+    scroll-behavior: smooth;
+}
 body{
     /* background-color: rgb(16, 160, 179); */
     font-family: 'Roboto', sans-serif;
@@ -35,7 +38,7 @@ button{
     border: 1px solid rgba(0, 0, 0,0.5);
     box-shadow: 2px 2px 10px rgba(0, 0, 0,0.5);
     color: white ;
-    background-color: #090E73;
+    background-color: #11b1d9;
 }
 /* Efecto al boton */
 button:hover{
@@ -48,6 +51,9 @@ button:hover{
 .container{
     max-width: 1400px;
     margin: auto;
+}
+.color-acento{
+    color: #118CD9;
 }
 
 /* Header */
@@ -108,4 +114,239 @@ header a:hover{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+}
+
+#hero h1{
+    color: white;
+}
+
+/* Cambiar tamanio boton hero */
+#hero button{
+    font-size: 1.75em;
+}
+
+#comu-ya .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+/* -----------Estilo Seccion servicios-------- */
+
+/* Fondo y fuente seccion servicios */
+
+#nuestros-servicios{
+    background-color: #118CD9;
+    color: rgb(4, 30, 69);
+    text-align: center;
+}
+#nuestros-servicios .container{
+   padding: 150px 12px;
+}
+#nuestros-servicios h2{
+  margin-top: 0; 
+  color: white;
+}
+#nuestros-servicios p{
+    display: none;
+}
+
+/* Estilos cartas */
+#nuestros-servicios .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.carta:first-child{
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../img/developer.jpg");
+    
+}
+.carta:nth-child(2){
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../img/ensenaza.jpg");
+}
+.carta:nth-child(3){
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../img/servers.jpg");
+}
+
+/* ------------Estilo caracteristicas------------ */
+#caracteristicas .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#caracteristicas li{
+    margin: 15px 0px;
+    font-weight: bold;
+}
+
+/* -------------Estilo seccion facebook------------- */
+#comunicate-ya{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #118CD9;
+    color: white;
+    /* padding: 0px 12px; */
+    height: 80vh;
+}
+
+#comunicate-ya h2{
+   
+    font-size: 9vw;
+}
+/* Cambiar tamanio boton comunicate-ya */
+#comunicate-ya button{
+    font-size: 5vw;
+}
+
+/* -----------------Estilo Footer--------------- */
+footer{
+    background-color: #DFE9F2;    
+}
+footer p{
+    margin: 0;
+    padding: 19px;
+    color: rgb(100, 100, 100);
+    font-size: 16px;
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* -----Estilizar para pantallas grandes ------*/
+
+@media(min-width: 720px){
+    /* ------------Header--------- */
+    header{
+        /* mantenemos fijo el nav */
+       position: fixed; 
+       width: 100%;
+    }
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #comu-ya .container{
+    /* Me mostrara en la misma linea todo */
+    display: flex;
+    justify-content: space-evenly;
+    }
+    #comu-ya .texto{
+        width: 50%;
+        max-width: 690px;
+        /* text-align: initial; */
+        /* padding-left: 30px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #comu-ya h2{
+        margin-top: 110px;    
+    }
+    #comu-ya .img-container{
+        background-image:url("../img/server1.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+    }
+
+    /* -------------Estilo carta -----------*/
+
+    #nuestros-servicios .programas{
+       display: flex;
+       justify-content: center;  
+    }
+
+    #nuestros-servicios p{
+        display: block;
+        margin-bottom: 50px;
+    }
+    #nuestros-servicios h3{
+        margin-top: 0;
+    }
+    #nuestros-servicios .carta{
+        padding: 50px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0,0.5);
+    }
+
+    /* -------Estilo caracteristicas ----- */
+
+    #caracteristicas{
+        background-image: url(../img/premio.png);
+        background-repeat: no-repeat;
+        background-size: 400px;
+        background-position: calc(100vw - 500px) 120px;
+    }
+    #caracteristicas .container{
+        text-align: initial;
+    }
+
+    #caracteristicas ul{
+        margin-left: 100px;
+    }
+
+    /*--------------- Estilo final -------------*/
+    #comunicate-ya h2{
+        font-size: 4em;
+    }
+    #comunicate-ya button{
+        font-size: 2em;
+    }
+
+    /* --------------Estilo footer ---------*/
+    footer .container{
+        justify-content: flex-end;
+    }
+
+
+
+
+
+
+
+}
+/* ---------Para otr medida de pantalla ---------------*/
+@media (min-width: 1100px){
+    #caracteristicas{
+        background-position-x: calc(100vw - 800px);
+    }
+
 }
